@@ -1,0 +1,135 @@
+@use '../abstract/' as *;
+@use '../utilities/utils' as *;
+
+.footer{
+
+  img{
+   width: 100px;
+   height: 40px;
+  }
+
+  background: $white-100;
+
+  &__top{
+    padding: 8rem 0 5rem;
+
+    &__brand{
+      margin-bottom: 2rem;
+
+      .logo{
+        margin-bottom: 1rem;
+        
+      }
+
+      &__text{
+        color: $gray-900;
+        font-size: $fs-5;
+        margin-bottom: 2rem;
+      }
+
+      &__social-list{
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        
+        ion-icon{
+          color: $gray-900;
+          font-size: 2rem;
+          padding: 5px;
+          border-radius: 50%;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+          &:is(:hover, :focus){
+            color: $white;
+            background: $green-900;
+            box-shadow: none;
+          }
+        }
+
+       
+      }
+    }
+  }
+  &__link-box{
+
+    &__list{
+      &:not(:last-child){
+        margin-bottom: 3rem;
+      }
+
+      &__title{
+        margin-bottom: 1.5rem;
+      }
+
+      &__link{
+        color: $gray-900;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        max-width: 15rem;
+
+        &:is(:hover, :focus){
+          color: $green-900;
+        }
+      }
+    }
+  }
+
+  &__bottom{
+    padding: 2rem 1.5rem;
+    background: $black-900;
+    color: $gray-700;
+    text-align: center;
+  }
+}
+
+@mixin footer-sm(){
+  .footer{
+
+
+    &__top{
+
+      &__brand{
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__link-box{
+     
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+  }
+}
+
+@mixin footer-lg(){
+  .footer{
+
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5rem;
+
+        &__brand{
+          margin-bottom: 0;
+        }
+
+    }
+
+    &__link-box{
+
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5rem;
+
+      &__list:not(:last-child){
+        margin-bottom: 0;
+      }
+    }
+
+   
+
+     
+    
+  }
+}

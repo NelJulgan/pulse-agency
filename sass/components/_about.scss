@@ -1,0 +1,163 @@
+@use '../abstract/' as *;
+@use '../utilities/utils' as *;
+
+.about{
+  position: relative;
+  z-index: 1;
+  background: url(../images/about-bg-1.png) no-repeat center center/cover;
+  padding: 12rem 0;
+  text-align: center;
+
+  &__top{
+    margin-bottom: 5rem;
+
+    .section-title,
+    .section-text{
+      color: $white;      
+    }
+
+    .section-title{
+      margin-bottom: 2rem;
+    }
+    .section-text{
+      margin-bottom: 6rem;
+      font-size: $fs-4;
+      color: $gray-500;
+    }
+
+    &__list{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+
+      &__card{
+        background: $white;
+        padding: 4rem;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &__icon{
+          color: $green-500;
+          font-size: 4.5rem;
+          width: max-content;
+          margin-inline: auto;
+          margin-bottom: 1.5rem;
+        }
+
+        &__title{
+          margin-bottom: 1.5rem;
+          font-size: 2rem;
+        }
+
+        &__text{
+          color: $gray-900;
+          font-size: $fs-5;
+        }
+      }
+    }
+  }
+
+  &__bottom{
+
+    &__banner{
+      margin-bottom: 5rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .section-title{
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: $white;
+    }
+    .section-text{
+      margin-bottom: 4rem;
+      font-weight: 400;
+      color: $white-100;
+      font-size: $fs-4;
+    }
+
+    .btn-secondary{
+      margin-inline: auto;
+    }
+  }
+}
+
+
+@mixin about-sm(){
+
+  .about{  
+
+
+    &__bottom{
+      
+      &__content{
+        text-align: left;
+      }
+
+      .btn-secondary{
+        margin-inline: 0;
+      }
+    }
+  }
+  
+}
+
+
+@mixin about-md(){
+
+  .about{
+
+
+   &__top{
+
+    &__list{
+      grid-template-columns: 1fr 1fr;
+
+      &__card{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title{
+          margin-inline: 0;
+        }
+      }
+    }
+   }
+  }
+  
+}
+
+@mixin about-lg(){
+  .about{
+
+    &__top{
+
+      .section-text{
+        max-width: 650px;
+        margin-inline: auto;
+      }
+
+      &__list{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &__bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      &__banner{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

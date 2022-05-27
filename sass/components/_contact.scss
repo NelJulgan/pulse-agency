@@ -1,0 +1,81 @@
+@use '../abstract/' as *;
+@use '../utilities/utils' as *;
+
+.contact{
+
+  margin-bottom: 12rem;
+
+  &__content{
+    margin-bottom: 5rem;
+
+    &__title{
+      color: $bluegreen-900;
+      margin-bottom: 6rem;
+      text-align: center;
+      font-weight: 900;
+    }
+
+    &__banner{
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  &__form{
+    background: $white-100;
+    padding: 2rem 1rem;
+    &__input-wrapper{
+       margin-bottom: 3rem;
+       font-weight: 700;
+
+       
+    }
+
+    .input-field{
+      padding: 2rem 1rem;
+      border: solid 1px $gray-500;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $gray-500;
+      background: $white;
+
+    }
+
+    textarea{
+      max-height: 30rem;
+      min-height: 10rem;
+      resize: vertical;
+    }
+  }
+
+}
+
+@mixin contact-lg(){
+  .contact{
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+     align-items: center;
+      gap: 3rem;
+    }
+
+    &__content{
+      max-width: 50rem;
+
+      &__title{
+        text-align: left;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+    }
+
+    &__form{
+      width: 50%;
+    }
+
+  }
+}
