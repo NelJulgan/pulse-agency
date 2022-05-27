@@ -1,0 +1,105 @@
+@use '../abstract/' as *;
+@use '../utilities/utils' as *;
+
+.hero{
+  position: relative;
+  padding: 13rem 0 14rem;
+  z-index: 1;
+
+
+  &__content{
+    text-align: center;
+
+    &__title,
+    &__text{
+      margin-bottom: 4rem;
+    }
+
+    &__title{
+      font-weight: 900;
+    }
+
+    &__text{
+      font-size: $fs-4;
+      color: $gray-900;
+    }
+
+    &__banner{
+      display: none;      
+    }
+
+    .btn-primary{
+      margin-inline: auto;
+    }
+
+  }
+  .shape-content{
+    position: absolute;
+    width: 90rem;
+    top: -200px;
+    right: -300px;
+    z-index: -1;
+  }
+
+  
+  
+}
+
+
+@mixin hero-sm(){
+  .hero{
+
+    .shape-content{        
+      top: -156px !important;
+      right: -152px !important;       
+       
+     } 
+    
+    &__content{
+      text-align: left;
+
+      &__title{
+        font-size: 6rem;
+      }
+
+      .btn-primary{
+        margin-inline: 0;       
+      }
+    }       
+    
+  }
+}
+
+@mixin hero-lg(){
+
+  .hero{
+
+
+    &__content{
+      max-width: 550px;
+    }
+
+    &__banner{
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 500px;
+      padding-top: 500px;
+      background: url(/images/hero-banner-1.png) no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@mixin hero-xlg(){
+  .hero{
+
+    
+
+    &__banner{
+      right: 10rem;
+    }
+  }
+}

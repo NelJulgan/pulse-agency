@@ -1,0 +1,77 @@
+@use 'header' as *;
+@use 'hero' as *;
+@use 'about' as *;
+@use 'features' as *;
+@use 'cta' as *;
+@use 'contact' as *;
+@use 'footer' as *;
+
+
+
+@media (min-width: 560px){
+ .container{
+   max-width: 550px;
+   margin-inline: auto ;   
+ }
+
+ .go-top{
+  bottom: 3rem;
+  right: 3rem;
+ }
+
+  .about .section-title,
+  .features .section-title{
+    font-size: 4rem;
+    
+    
+  }
+
+
+  .contact__content__title{
+    font-size: 4.2rem;
+  }
+
+
+ @include header-sm();
+ @include hero-sm();
+ @include about-sm();
+ @include footer-sm();
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 740px;
+  }
+
+  @include about-md();
+  @include features-md();
+  @include cta-md();
+ 
+
+  
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 950px;
+  }
+
+  @include header-lg();
+  @include hero-lg();
+  @include about-lg();
+  @include features-lg();
+  @include cta-lg();
+  @include contact-lg();
+  @include footer-lg();
+  
+}
+
+@media (min-width: 1200px){
+
+  .container{
+    max-width: 1150px;
+    
+  }
+
+  @include hero-xlg();
+}
