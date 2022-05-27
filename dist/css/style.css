@@ -238,7 +238,7 @@ header .navbar .btn-primary {
 .about {
   position: relative;
   z-index: 1;
-  background: url(/images/about-bg-1.png) no-repeat center center/cover;
+  background: url(../images/about-bg-1.png) no-repeat center center/cover;
   padding: 12rem 0;
   text-align: center;
 }
@@ -620,7 +620,7 @@ header .navbar .btn-primary {
     transform: translateY(-50%);
     width: 500px;
     padding-top: 500px;
-    background: url(/images/hero-banner-1.png) no-repeat;
+    background: url(../images/hero-banner-1.png) no-repeat;
     background-size: contain;
   }
 
